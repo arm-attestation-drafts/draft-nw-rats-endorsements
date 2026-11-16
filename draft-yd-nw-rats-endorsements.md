@@ -7,8 +7,8 @@ category: info
 date: {DATE}
 category: info
 ipr: trust200902
-area: Security
-workgroup: RATS
+# area: Security
+# workgroup: RATS
 
 stand_alone: yes
 pi:
