@@ -57,7 +57,7 @@ entity:
 
 --- abstract
 
-Arm Normal World Attestation Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced from Normal World running on an Arm Platform.
+Arm Normal World Attestation Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced from Normal World client running on an Arm Platform.
 
 This memo defines Normal World Endorsements as a profile of the CoRIM data model.
 
@@ -66,9 +66,10 @@ This memo defines Normal World Endorsements as a profile of the CoRIM data model
 
 # Introduction
 
-Arm's Normal World Remote Attestation provides a mechanism for a Normal World application to obtain a Remote Attestation token from the underlying Arm platform.
+Arm's Normal World Remote Attestation provides a mechanism for a Normal World client to obtain a Remote Attestation token from the underlying Arm platform.
 
-Arm's Normal World Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced by an Arm platform that provides the neccessary attestation services to an application operating in the Normal World.
+Arm's Normal World Endorsements comprise of reference values and cryptographic key material that an Attestation Verifier requires.
+These Endorsements are used to appraise Attestation Evidence produced by a Normal World client running on an Arm platform.
 
 This memo defines Normal World Endorsements as a profile of the CoRIM data model {{-rats-corim}}.
 
