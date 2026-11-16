@@ -7,7 +7,7 @@
 <title>A CoRIM Profile for Arm's Normal World Attestation Endorsements</title>
 <meta content="Yogesh Deshpande" name="author">
 <meta content="
-       Arm Normal World Attestation Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced from Normal World running on an Arm Platform. 
+       Arm Normal World Attestation Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced from Normal World client running on an Arm Platform. 
        This memo defines Normal World Endorsements as a profile of the CoRIM data model. 
     " name="description">
 <meta content="xml2rfc 3.35.0" name="generator">
@@ -1053,7 +1053,7 @@ svg {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">RATS</dd>
+<dd class="workgroup">Network Working Group</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-yd-nw-rats-endorsements-latest</dd>
 <dt class="label-published">Published:</dt>
@@ -1076,8 +1076,16 @@ svg {
 <h1 id="title">A CoRIM Profile for Arm's Normal World Attestation Endorsements</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">Arm Normal World Attestation Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced from Normal World running on an Arm Platform.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">Arm Normal World Attestation Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced from Normal World client running on an Arm Platform.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This memo defines Normal World Endorsements as a profile of the CoRIM data model.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+</section>
+<section class="note rfcEditorRemove" id="section-note.1">
+      <h2 id="name-discussion-venues">
+<a href="#name-discussion-venues" class="section-name selfRef">Discussion Venues</a>
+      </h2>
+<p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
+<p id="section-note.1-2">Source for this draft and an issue tracker can be found at
+    <span><a href="https://github.com/arm-attestation-drafts/draft-nw-rats-endorsements">https://github.com/arm-attestation-drafts/draft-nw-rats-endorsements</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1173,8 +1181,9 @@ svg {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">Arm's Normal World Remote Attestation provides a mechanism for a Normal World application to obtain a Remote Attestation token from the underlying Arm platform.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">Arm's Normal World Endorsements comprise reference values and cryptographic key material that a Verifier needs to appraise Attestation Evidence produced by an Arm platform that provides the neccessary attestation services to an application operating in the Normal World.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-1">Arm's Normal World Remote Attestation provides a mechanism for a Normal World client to obtain a Remote Attestation token from the underlying Arm platform.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Arm's Normal World Endorsements comprise of reference values and cryptographic key material that an Attestation Verifier requires.
+These Endorsements are used to appraise Attestation Evidence produced by a Normal World client running on an Arm platform.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">This memo defines Normal World Endorsements as a profile of the CoRIM data model <span>[<a href="#I-D.ietf-rats-corim" class="cite xref">I-D.ietf-rats-corim</a>]</span>.<a href="#section-1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
