@@ -1,0 +1,167 @@
+
+
+
+
+RATS                                                        Y. Deshpande
+Internet-Draft                                                   Arm Ltd
+Intended status: Informational                          16 November 2026
+Expires: 20 May 2027
+
+
+    A CoRIM Profile for Arm's Normal World Attestation Endorsements
+                  draft-yd-nw-rats-endorsements-latest
+
+Abstract
+
+   Arm Normal World Attestation Endorsements comprise reference values
+   and cryptographic key material that a Verifier needs to appraise
+   Attestation Evidence produced from Normal World running on an Arm
+   Platform.
+
+   This memo defines Normal World Endorsements as a profile of the CoRIM
+   data model.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 20 May 2027.
+
+Copyright Notice
+
+   Copyright (c) 2026 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Conventions and Definitions
+     2.1.  Arm Platform Endorsements
+   3.  Security Considerations
+   4.  IANA Considerations
+   5.  References
+     5.1.  Normative References
+     5.2.  Informative References
+   Acknowledgments
+   Contributors
+   Author's Address
+
+1.  Introduction
+
+   Arm's Normal World Remote Attestation provides a mechanism for a
+   Normal World application to obtain a Remote Attestation token from
+   the underlying Arm platform.
+
+   Arm's Normal World Endorsements comprise reference values and
+   cryptographic key material that a Verifier needs to appraise
+   Attestation Evidence produced by an Arm platform that provides the
+   neccessary attestation services to an application operating in the
+   Normal World.
+
+   This memo defines Normal World Endorsements as a profile of the CoRIM
+   data model [I-D.ietf-rats-corim].
+
+2.  Conventions and Definitions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+   The reader is assumed to be familiar with the terms and concepts
+   introduced in Section 4 of [RFC9334].
+
+2.1.  Arm Platform Endorsements
+
+3.  Security Considerations
+
+   TODO Security
+
+4.  IANA Considerations
+
+   This document has no IANA actions.
+
+5.  References
+
+5.1.  Normative References
+
+   [I-D.ietf-rats-corim]
+              Birkholz, H., Fossati, T., Deshpande, Y., Smith, N., and
+              W. Pan, "Concise Reference Integrity Manifest", Work in
+              Progress, Internet-Draft, draft-ietf-rats-corim-12, 1
+              November 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-rats-corim-12>.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC5280]  Cooper, D., Santesson, S., Farrell, S., Boeyen, S.,
+              Housley, R., and W. Polk, "Internet X.509 Public Key
+              Infrastructure Certificate and Certificate Revocation List
+              (CRL) Profile", RFC 5280, DOI 10.17487/RFC5280, May 2008,
+              <https://www.rfc-editor.org/rfc/rfc5280>.
+
+   [RFC7468]  Josefsson, S. and S. Leonard, "Textual Encodings of PKIX,
+              PKCS, and CMS Structures", RFC 7468, DOI 10.17487/RFC7468,
+              April 2015, <https://www.rfc-editor.org/rfc/rfc7468>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+   [TBB]      Arm, "Trusted Board Boot", 30 December 2024,
+              <https://trustedfirmware-
+              a.readthedocs.io/en/stable/design/trusted-board-
+              boot.html>.
+
+5.2.  Informative References
+
+   [RFC9334]  Birkholz, H., Thaler, D., Richardson, M., Smith, N., and
+              W. Pan, "Remote ATtestation procedureS (RATS)
+              Architecture", RFC 9334, DOI 10.17487/RFC9334, January
+              2023, <https://www.rfc-editor.org/rfc/rfc9334>.
+
+Acknowledgments
+
+   TODO acknowledge.
+
+Contributors
+
+   Simon Frost
+   Arm Limited
+   Email: Simon.Frost@arm.com
+
+
+   Sergei Trofimov
+   Arm Limited
+   Email: Sergei.Trofimov@arm.com
+
+
+Author's Address
+
+   Yogesh Deshpande
+   Arm Ltd
+   Email: yogesh.deshpande@arm.com
