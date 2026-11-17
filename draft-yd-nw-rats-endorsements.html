@@ -1365,7 +1365,7 @@ A single <code>reference-triple-record</code> <span class="bcp14">MUST</span> co
 <a href="#section-3.1.3.1" class="section-number selfRef">3.1.3.1. </a><a href="#name-arm-platform-software-compo" class="section-name selfRef">Arm Platform Software Components</a>
             </h5>
 <p id="section-3.1.3.1-1">Each Arm Platform software component is encoded in a <code>measurement-values-map</code> as defined in <a href="#cddl-swcomp-mvm" class="auto internal xref">Figure 5</a>.<a href="#section-3.1.3.1-1" class="pilcrow">¶</a></p>
-<span id="name-cca-platform-software-compo"></span><div id="cddl-swcomp-mvm">
+<span id="name-arm-platform-software-compon"></span><div id="cddl-swcomp-mvm">
 <figure id="figure-5">
               <div class="lang-cddl sourcecode" id="section-3.1.3.1-2.1">
 <pre>
@@ -1395,7 +1395,7 @@ arm-swcomp-signer-id = #6.560(arm-hash-type)
 </pre>
 </div>
 <figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
-<a href="#name-cca-platform-software-compo" class="selfRef">CCA Platform Software Component encoding</a>
+<a href="#name-arm-platform-software-compon" class="selfRef">ARM Platform Software Component encoding</a>
               </figcaption></figure>
 </div>
 <span class="break"></span><dl class="dlNewline" id="section-3.1.3.1-3">
@@ -1429,38 +1429,38 @@ This field is mandatory.<a href="#section-3.1.3.1-3.8.1" class="pilcrow">¶</a><
 </dd>
             <dd class="break"></dd>
 </dl>
-<p id="section-3.1.3.1-4">Each <code>measurement-values-map</code> for a CCA Platform software component is wrapped in a <code>measurement-map</code> with an <code>mkey</code> using the text variant of the <code>$measured-element-type-choice</code>.
-The value of the <code>mkey</code> <span class="bcp14">MUST</span> be "cca.software-component".
+<p id="section-3.1.3.1-4">Each <code>measurement-values-map</code> for a ARM Platform software component is wrapped in a <code>measurement-map</code> with an <code>mkey</code> using the text variant of the <code>$measured-element-type-choice</code>.
+The value of the <code>mkey</code> <span class="bcp14">MUST</span> be "arm.platform.software-component".
 The <code>authorized-by</code> field of the <code>measurement-map</code> <span class="bcp14">MUST NOT</span> be present.
 Find the related CDDL definitions in <a href="#cddl-swcomp-mm" class="auto internal xref">Figure 6</a>.<a href="#section-3.1.3.1-4" class="pilcrow">¶</a></p>
-<span id="name-cca-platform-software-compon"></span><div id="cddl-swcomp-mm">
+<span id="name-arm-platform-software-compone"></span><div id="cddl-swcomp-mm">
 <figure id="figure-6">
               <div class="lang-cddl sourcecode" id="section-3.1.3.1-5.1">
 <pre>
 arm-swcomp-measurement-map = {
-  &amp;(mkey: 0) =&gt; "cca.software-component"
+  &amp;(mkey: 0) =&gt; "arm.platform.software-component"
   &amp;(mval: 1) =&gt; arm-swcomp-measurement-values-map
 }
 </pre>
 </div>
 <figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
-<a href="#name-cca-platform-software-compon" class="selfRef">CCA Platform Software Component measurement-map</a>
+<a href="#name-arm-platform-software-compone" class="selfRef">ARM Platform Software Component measurement-map</a>
               </figcaption></figure>
 </div>
 </section>
 </div>
-<div id="cca-platform-configuration">
+<div id="arm-platform-configuration">
 <section id="section-3.1.3.2">
-            <h5 id="name-cca-platform-configuration">
-<a href="#section-3.1.3.2" class="section-number selfRef">3.1.3.2. </a><a href="#name-cca-platform-configuration" class="section-name selfRef">CCA Platform Configuration</a>
+            <h5 id="name-arm-platform-configuration">
+<a href="#section-3.1.3.2" class="section-number selfRef">3.1.3.2. </a><a href="#name-arm-platform-configuration" class="section-name selfRef">ARM Platform Configuration</a>
             </h5>
-<p id="section-3.1.3.2-1">The CCA Platform configuration describes the set of chosen implementation options of the CCA Platform.
+<p id="section-3.1.3.2-1">The ARM Platform configuration describes the set of chosen implementation options of the ARM Platform.
 For example, this may include a description of the level of physical memory protection provided.<a href="#section-3.1.3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.1.3.2-2">CCA Platform configuration is vendor-specific variable-length data.
+<p id="section-3.1.3.2-2">ARM Platform configuration is vendor-specific variable-length data.
 Only some of the data may be security-relevant.
 For these reasons, it is represented in a <code>raw-value</code> of the <code>measurement-values-map</code>, using the <code>tagged-masked-raw-value</code> variant of the <code>$raw-values-type-choice</code>.
 Refer to <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-rats-corim-12#section-5.1.4.1.4.6" class="relref">Section 5.1.4.1.4.6</a> of [<a href="#I-D.ietf-rats-corim" class="cite xref">I-D.ietf-rats-corim</a>]</span> for the details about the comparison algorithm.<a href="#section-3.1.3.2-2" class="pilcrow">¶</a></p>
-<span id="name-cca-platform-configuration-"></span><div id="cddl-config-mvm">
+<span id="name-arm-platform-configuration-"></span><div id="cddl-config-mvm">
 <figure id="figure-7">
               <div class="lang-cddl sourcecode" id="section-3.1.3.2-3.1">
 <pre>
@@ -1475,26 +1475,26 @@ arm-config-tagged-masked-raw-value = #6.563([
 </pre>
 </div>
 <figcaption><a href="#figure-7" class="selfRef">Figure 7</a>:
-<a href="#name-cca-platform-configuration-" class="selfRef">CCA Platform Configuration measurement-values-map</a>
+<a href="#name-arm-platform-configuration-" class="selfRef">ARM Platform Configuration measurement-values-map</a>
               </figcaption></figure>
 </div>
-<p id="section-3.1.3.2-4">The <code>measurement-values-map</code> for a CCA Platform configuration is wrapped in a <code>measurement-map</code> with an <code>mkey</code> using the text variant of the <code>$measured-element-type-choice</code>.
-The value of the <code>mkey</code> <span class="bcp14">MUST</span> be "cca.platform-config".
-There <span class="bcp14">MUST</span> be only one <code>measurement-map</code> with <code>mkey</code> "cca.platform-config" in the triple.<a href="#section-3.1.3.2-4" class="pilcrow">¶</a></p>
+<p id="section-3.1.3.2-4">The <code>measurement-values-map</code> for a ARM Platform configuration is wrapped in a <code>measurement-map</code> with an <code>mkey</code> using the text variant of the <code>$measured-element-type-choice</code>.
+The value of the <code>mkey</code> <span class="bcp14">MUST</span> be "arm.platform.platform-config".
+There <span class="bcp14">MUST</span> be only one <code>measurement-map</code> with <code>mkey</code> "arm.platform.platform-config" in the triple.<a href="#section-3.1.3.2-4" class="pilcrow">¶</a></p>
 <p id="section-3.1.3.2-5">The <code>authorized-by</code> field of the <code>measurement-map</code> <span class="bcp14">MUST NOT</span> be present.
 Find the related CDDL definitions in <a href="#cddl-config-mm" class="auto internal xref">Figure 8</a>.<a href="#section-3.1.3.2-5" class="pilcrow">¶</a></p>
-<span id="name-cca-platform-configuration-m"></span><div id="cddl-config-mm">
+<span id="name-arm-platform-configuration-m"></span><div id="cddl-config-mm">
 <figure id="figure-8">
               <div class="lang-cddl sourcecode" id="section-3.1.3.2-6.1">
 <pre>
 arm-config-measurement-map = {
-  &amp;(mkey: 0) =&gt; "cca.platform-config"
+  &amp;(mkey: 0) =&gt; "arm.platform.platform-config"
   &amp;(mval: 1) =&gt; arm-config-measurement-values-map
 }
 </pre>
 </div>
 <figcaption><a href="#figure-8" class="selfRef">Figure 8</a>:
-<a href="#name-cca-platform-configuration-m" class="selfRef">CCA Platform Configuration measurement-map</a>
+<a href="#name-arm-platform-configuration-m" class="selfRef">ARM Platform Configuration measurement-map</a>
               </figcaption></figure>
 </div>
 </section>
@@ -1602,7 +1602,7 @@ arm-config-tagged-masked-raw-value = #6.563([
 </div>
 <p id="section-3.1.3.4-5">The <code>measurement-values-map</code> for an Arm Platform manufacturing configuration is wrapped in a <code>measurement-map</code> with an <code>mkey</code> using the text variant of the <code>$measured-element-type-choice</code>.
 The value of the <code>mkey</code> <span class="bcp14">MUST</span> be "arm.platform.platform-manufacturing-config".
-There <span class="bcp14">MUST</span> be only one <code>measurement-map</code> with <code>mkey</code> "cca.platform-manufacturing-config" in the triple.<a href="#section-3.1.3.4-5" class="pilcrow">¶</a></p>
+There <span class="bcp14">MUST</span> be only one <code>measurement-map</code> with <code>mkey</code> "arm.platform.platform-manufacturing-config" in the triple.<a href="#section-3.1.3.4-5" class="pilcrow">¶</a></p>
 <p id="section-3.1.3.4-6">The <code>authorized-by</code> field of the <code>measurement-map</code> <span class="bcp14">MUST NOT</span> be present.<a href="#section-3.1.3.4-6" class="pilcrow">¶</a></p>
 <p id="section-3.1.3.4-7">Find the related CDDL definitions in  <a href="#cddl-mfg-config-mvm" class="auto internal xref">Figure 11</a> and in <a href="#cddl-mfg-config-mm" class="auto internal xref">Figure 12</a>.<a href="#section-3.1.3.4-7" class="pilcrow">¶</a></p>
 <span id="name-arm-platform-manufacturing-co"></span><div id="cddl-mfg-config-mm">
@@ -1627,7 +1627,7 @@ arm-config-measurement-map = {
 <a href="#section-3.1.3.5" class="section-number selfRef">3.1.3.5. </a><a href="#name-comid-example" class="section-name selfRef">CoMID Example</a>
             </h5>
 <p id="section-3.1.3.5-1">An example CoMID containing one Reference Values triple with the expected values for both software components and platform configuration is given in <a href="#ex-arm-platform-refval" class="auto internal xref">Figure 13</a>.<a href="#section-3.1.3.5-1" class="pilcrow">¶</a></p>
-<span id="name-example-cca-platform-refere"></span><div id="ex-arm-platform-refval">
+<span id="name-example-arm-platform-refere"></span><div id="ex-arm-platform-refval">
 <figure id="figure-13">
               <div class="breakable lang-cbor-diag sourcecode" id="section-3.1.3.5-2.1">
 <pre>
@@ -1693,7 +1693,7 @@ arm-config-measurement-map = {
 </pre>
 </div>
 <figcaption><a href="#figure-13" class="selfRef">Figure 13</a>:
-<a href="#name-example-cca-platform-refere" class="selfRef">Example CCA Platform Reference Values</a>
+<a href="#name-example-arm-platform-refere" class="selfRef">Example ARM Platform Reference Values</a>
               </figcaption></figure>
 </div>
 </section>
