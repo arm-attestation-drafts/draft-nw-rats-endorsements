@@ -1,0 +1,59 @@
+/ concise-mid-tag / {
+  / comid.tag-identity / 1 : {
+    / comid.tag-id / 0 : h'3f06af63a93c11e4979700505690773f'
+  },
+  / comid.triples / 4 : {
+    / comid.reference-triples / 0 : [
+      [
+        / environment-map / {
+          / comid.class / 0 : {
+            / comid.class-id / 0 :
+              / tagged-bytes / 560(
+                h'61636d652d696d706c656d656e746174
+                  696f6e2d69642d303030303030303031'
+              )
+          }
+        },
+        [
+          / measurement-map / {
+            / comid.mkey / 0 : "arm.platform.software-component",
+            / comid.mval / 1 : {
+              / comid.digests / 2 : [
+                / hash-alg-id / "sha-256",
+                / hash-value /  h'9a271f2a916b0b6ee6cecb2426f0b320
+                                  6ef074578be55d9bc94f6f3fe3ab86aa'
+              ],
+              / name / 11 : "RSE_BL1_2",
+              / cryptokeys / 13 : [ 560(h'5378796307535df3ec8d8b15a2
+                                          e2dc5641419c3d3060cfe32238
+                                          c0fa973f7aa3') ]
+            }
+          },
+          / measurement-map / {
+            / comid.mkey / 0 : "arm.platform.software-component",
+            / comid.mval / 1 : {
+              / comid.digests / 2 : [
+                / hash-alg-id / "sha-256",
+                / hash-value /  h'53c234e5e8472b6ac51c1ae1cab3fe06
+                                  fad053beb8ebfd8977b010655bfdd3c3'
+              ],
+              / name / 11 : "RSE_BL2",
+              / cryptokeys / 13 : [ 560(h'5378796307535df3ec8d8b15a2
+                                          e2dc5641419c3d3060cfe32238
+                                          c0fa973f7aa3') ]
+            }
+          },
+          / measurement-map / {
+            / comid.mkey / 0 : "arm.platform.platform-config",
+            / comid.mval / 1 : {
+              / comid.raw-value / 4 : / tagged-masked-raw-value / 563([
+                / value / h'cfcfcfcf',
+                / mask /  h'ffffffff'
+              ])
+            }
+          }
+        ]
+      ]
+    ]
+  }
+}

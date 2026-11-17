@@ -1,0 +1,34 @@
+/ concise-mid-tag / {
+  / comid.tag-identity / 1 : {
+    / comid.tag-id / 0 : h'3f06af63a93c11e4979700505690773f'
+  },
+  / comid.triples / 4 : {
+    / comid.reference-triples / 0 : [
+      [
+        / environment-map / {
+          / comid.class / 0 : {
+            / comid.class-id (implementation id) 0 :
+              / tagged-bytes / 560(
+                h'61636d652d696d706c656d656e746174
+                  696f6e2d69642d303030303030303031'
+              )
+          }
+        },
+        [
+          / measurement-map / {
+            / comid.mkey / 0 : 602({
+              / "arm.platform.platform-config-id" / 1 : "any-value"
+            }),
+            / comid.mval / 1 : {
+              / comid.raw-value / 4 : {
+               / tagged-bytes / 560(
+                 h'67b28b6c39cc40a19117ab5b05911e37'
+                )
+              }
+            }
+          }
+        ]
+      ]
+    ]
+  }
+}
