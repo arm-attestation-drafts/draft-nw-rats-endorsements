@@ -195,7 +195,7 @@ arm-swcomp-name = text
 
 arm-swcomp-signer-id = #6.560(arm-hash-type)
 ~~~
-{: #cddl-swcomp-mvm title="CCA Platform Software Component encoding"}
+{: #cddl-swcomp-mvm title="ARM Platform Software Component encoding"}
 
 {:vspace}
 version (key 0):
@@ -219,25 +219,25 @@ cryptokeys (key 13):
 The entry contains the "signer id" (key 5) of the `arm-platform-sw-component`.
 This field is mandatory.
 
-Each `measurement-values-map` for a CCA Platform software component is wrapped in a `measurement-map` with an `mkey` using the text variant of the `$measured-element-type-choice`.
-The value of the `mkey` MUST be "cca.software-component".
+Each `measurement-values-map` for a ARM Platform software component is wrapped in a `measurement-map` with an `mkey` using the text variant of the `$measured-element-type-choice`.
+The value of the `mkey` MUST be "arm.platform.software-component".
 The `authorized-by` field of the `measurement-map` MUST NOT be present.
 Find the related CDDL definitions in {{cddl-swcomp-mm}}.
 
 ~~~ cddl
 arm-swcomp-measurement-map = {
-  &(mkey: 0) => "cca.software-component"
+  &(mkey: 0) => "arm.platform.software-component"
   &(mval: 1) => arm-swcomp-measurement-values-map
 }
 ~~~
-{: #cddl-swcomp-mm title="CCA Platform Software Component measurement-map"}
+{: #cddl-swcomp-mm title="ARM Platform Software Component measurement-map"}
 
-#### CCA Platform Configuration
+#### ARM Platform Configuration
 
-The CCA Platform configuration describes the set of chosen implementation options of the CCA Platform.
+The ARM Platform configuration describes the set of chosen implementation options of the ARM Platform.
 For example, this may include a description of the level of physical memory protection provided.
 
-CCA Platform configuration is vendor-specific variable-length data.
+ARM Platform configuration is vendor-specific variable-length data.
 Only some of the data may be security-relevant.
 For these reasons, it is represented in a `raw-value` of the `measurement-values-map`, using the `tagged-masked-raw-value` variant of the `$raw-values-type-choice`.
 Refer to {{Section 5.1.4.1.4.6 of -rats-corim}} for the details about the comparison algorithm.
@@ -252,22 +252,22 @@ arm-config-tagged-masked-raw-value = #6.563([
   mask: bytes
 ])
 ~~~
-{: #cddl-config-mvm title="CCA Platform Configuration measurement-values-map"}
+{: #cddl-config-mvm title="ARM Platform Configuration measurement-values-map"}
 
-The `measurement-values-map` for a CCA Platform configuration is wrapped in a `measurement-map` with an `mkey` using the text variant of the `$measured-element-type-choice`.
-The value of the `mkey` MUST be "cca.platform-config".
-There MUST be only one `measurement-map` with `mkey` "cca.platform-config" in the triple.
+The `measurement-values-map` for a ARM Platform configuration is wrapped in a `measurement-map` with an `mkey` using the text variant of the `$measured-element-type-choice`.
+The value of the `mkey` MUST be "arm.platform.platform-config".
+There MUST be only one `measurement-map` with `mkey` "arm.platform.platform-config" in the triple.
 
 The `authorized-by` field of the `measurement-map` MUST NOT be present.
 Find the related CDDL definitions in {{cddl-config-mm}}.
 
 ~~~ cddl
 arm-config-measurement-map = {
-  &(mkey: 0) => "cca.platform-config"
+  &(mkey: 0) => "arm.platform.platform-config"
   &(mval: 1) => arm-config-measurement-values-map
 }
 ~~~
-{: #cddl-config-mm title="CCA Platform Configuration measurement-map"}
+{: #cddl-config-mm title="ARM Platform Configuration measurement-map"}
 
 #### Arm Platform Trusted Board Boot ROTPK {#sec-rotpk}
 
@@ -350,7 +350,7 @@ arm-config-tagged-masked-raw-value = #6.563([
 
 The `measurement-values-map` for an Arm Platform manufacturing configuration is wrapped in a `measurement-map` with an `mkey` using the text variant of the `$measured-element-type-choice`.
 The value of the `mkey` MUST be "arm.platform.platform-manufacturing-config".
-There MUST be only one `measurement-map` with `mkey` "cca.platform-manufacturing-config" in the triple.
+There MUST be only one `measurement-map` with `mkey` "arm.platform.platform-manufacturing-config" in the triple.
 
 The `authorized-by` field of the `measurement-map` MUST NOT be present.
 
@@ -371,7 +371,7 @@ An example CoMID containing one Reference Values triple with the expected values
 ~~~ cbor-diag
 {::include examples/platform-refval-meas.diag}
 ~~~
-{: #ex-arm-platform-refval title="Example CCA Platform Reference Values" }
+{: #ex-arm-platform-refval title="Example ARM Platform Reference Values" }
 
 ### Attestation Verification Keys {#sec-keys}
 
