@@ -1,0 +1,5 @@
+/ corim-map / {
+  / corim.profile / 3:
+    32("tag:arm.com,2026:endorsements/arm_nw_platform#1.0.0")
+  / ... /
+}
